@@ -1,0 +1,20 @@
+## 项目的端口号
+server: 
+  port: 5000
+ 
+## 数据库
+spring: 
+  datasource: 
+    ## 驱动程序
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    ## URL
+    url: jdbc:mysql://127.0.0.1:3306/wx_mall?serverTimezone=GMT%2b8&useUnicode=true&characterEncoding=utf-8
+    ## 账号
+    username: root
+    ##密码纯数字,必须加单引号，字符串的可以不加
+    password: 'root'
+
+## 打印sql日志
+mybatis: 
+   configuration: 
+      log-impl: org.apache.ibatis.logging.stdout.StdOutImpl    

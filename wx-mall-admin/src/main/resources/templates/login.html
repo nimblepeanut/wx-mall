@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		
+		<title>繁星商城-后台管理系统</title>
+		
+		<!-- 引入layui样式  -->
+		<link rel="stylesheet" href="/layui/css/layui.css">
+		
+		<!-- 引入主页样式 -->
+		<link rel="stylesheet" href="/css/login.css">
+		
+	</head>
+	
+	<body>
+
+		<!-- 登录表单 -->
+		<form class="layui-form" method="post">
+
+			<h1>管理员登录</h1>
+
+			<!--账号 -->
+
+			<div class="layui-form-item">
+
+				<label class="layui-form-label">账号</label>
+
+				<div class="layui-input-inline">
+					
+					<input type="text" name="username" id="username" value="" 
+						class="layui-input" placeholder="请输入账号" />
+				
+				</div>
+				
+			</div>
+
+			<div class="layui-form-item">
+				
+				<label class="layui-form-label">密码</label>
+				
+				<div class="layui-input-inline">
+					
+					<input type="password" name="password" id="password" value="" 
+						class="layui-input" placeholder="请输入密码" />
+						
+				</div>
+				
+			</div>
+			
+			<!-- 验证码 开始 -->
+
+			<div class="layui-form-item">
+				
+				<label class="layui-form-label">验证码</label>
+				
+				<div class="layui-input-inline">
+					
+					 <input type="text" name="verCode" value="" 
+					 	class="layui-input" placeholder="请输入验证码" /> 
+				
+				</div>
+				
+				<div class="layui-input-inline verCode">
+					
+					<img id="verCode" src="/verCode" title="点击刷新">
+					
+				</div>
+				
+			</div>
+			
+			<!-- 验证码 结束 -->
+			
+			<!-- 按钮 -->
+			
+			<div class="layui-form-item">
+				
+				<div class="layui-input-block">
+					
+					<!-- 错误信息 -->
+					<span class="error" th:text="${error}">格式正确</span>
+					
+					<button type="submit" class="layui-btn" lay-submit lay-filter="login">立即登录</button>
+				
+				</div>
+				
+			</div>
+			
+		</form>
+
+		<!--引入layui的js  -->
+		<script src="/layui/layui.js" type="text/javascript" charset="UTF-8"></script>
+		
+		<script>
+			
+			// 验证码图片的点击事件
+			document.getElementById("verCode").onclick = function() {
+				// new Date().getMilliseconds()：当前时间的毫秒值
+				document.getElementById("verCode").src = "/verCode?"+new Date().getMilliseconds();
+			}
+			
+		</script>
+		
+	</body>
+</html>

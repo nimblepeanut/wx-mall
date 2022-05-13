@@ -1,0 +1,371 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>繁星商城管理系统</title>
+
+<!-- 引入layui样式 -->
+<link rel="stylesheet" href="/layui/css/layui.css">
+
+<!-- 引入主页样式 -->
+<link rel="stylesheet" href="/css/index.css">
+
+</head>
+
+<body id="index-body">
+
+	<div class="layui-layout layui-layout-admin">
+
+		<div id="layui-header" class="layui-header">
+
+			<div class="layui-logo layui-hide-xs layui-bg-black">
+
+				<div id="layui-bg-black">繁星商城-后台管理系统</div>
+
+			</div>
+
+			<!-- 头部区域（可配合layui 已有的水平导航） -->
+			<ul class="layui-nav layui-layout-left">
+
+				<!-- 移动端显示 -->
+				<li class="layui-nav-item layui-show-xs-inline-block layui-hide-sm"
+					lay-header-event="menuLeft"><i
+					class="layui-icon layui-icon-spread-left"></i></li>
+
+				<!-- 顶部选择栏 -->
+				<li class="layui-nav-item layui-hide-xs"><a href="/"> <i
+						class="layui-icon layui-icon-home"
+						style="font-size: 15px; color: #FFFFFF;"></i> 首页
+				</a></li>
+				
+				<li class="layui-nav-item layui-hide-xs">
+					<a href="javascript:;" data-url="/html/admin/adminList.html">
+						<i class="layui-icon layui-icon-service" 
+							style="font-size: 15px; color: #FFFFFF;">
+						</i>
+						管理员账号
+					</a>
+				</li>
+
+				<li class="layui-nav-item layui-hide-xs">
+					<a href="javascript:;"  data-url="/html/user/userECharts.html">
+						<i class="layui-icon layui-icon-date" 
+							style="font-size: 15px; color: #FFFFFF;">
+						</i> 
+						用户注册情况
+					</a>
+				</li>
+
+				<li class="layui-nav-item layui-hide-xs">
+					<a href="javascript:;" data-url="/html/goods/goodsList.html">
+						<i class="layui-icon layui-icon-form"
+							style="font-size: 15px; color: #FFFFFF;">
+						</i>
+						商品列表
+					</a>
+				</li>
+
+				<li class="layui-nav-item layui-hide-xs">
+					<a href="javascript:;" data-url="/html/category/categoryECharts.html">
+							<i class="layui-icon layui-icon-chart-screen"
+								style="font-size: 15px; color: #FFFFFF;">
+							</i>
+							分类信息统计
+					</a>
+				</li>
+
+				<!-- 切换页面风格 -->
+				<li class="layui-nav-item"><a href="javascript:;"> <i
+						class="layui-icon layui-icon-theme"
+						style="font-size: 15px; color: #FFFFFF;"></i> 页面风格
+				</a>
+
+					<dl class="layui-nav-child">
+
+						<dd>
+							<a style="height: 35px; margin-top: -5.5px;" href="javascript:;"
+								onclick="getCol('https://pic.imgdb.cn/item/62636e3f239250f7c575ba18.png',
+											'#23262E' ,'#393D49' ,'#393D49' ,'#393D49' ,'#282B33')">
+								<i class="layui-icon layui-icon-rate-half"
+								style="font-size: 15px;"></i> 经典黑白
+							</a>
+						</dd>
+
+						<dd>
+							<a
+								style="margin-right: -1px; margin-left: -1px; margin-bottom: -1px; background-color: #FFCD79; color: #F6593E;"
+								href="javascript:;"
+								onclick="getCol('https://pic.imgdb.cn/item/6262b38a239250f7c5492a51.png', 
+											'#AC3E2B', '#F6593E', '#F6593E', '#F6593E', '#FFCD79')">
+								<i class="layui-icon layui-icon-fire"
+								style="font-size: 15px; color: #F6593E;"></i> 薪炎永燃
+							</a>
+						</dd>
+
+						<dd>
+							<a
+								style="margin-right: -1px; margin-left: -1px; margin-bottom: -7px; background-color: #6A8A9D; color: #285B78;"
+								href="javascript:;"
+								onclick="getCol('https://pic.imgdb.cn/item/6262dd31239250f7c5b561b2.png', 
+											'#1C4054' ,'#285B78' ,'#285B78' ,'#285B78' ,'#6A8A9D')">
+								<i class="layui-icon layui-icon-picture"
+								style="font-size: 15px;"></i> 浮云远山
+							</a>
+						</dd>
+
+					</dl></li>
+
+			</ul>
+
+			<ul class="layui-nav layui-layout-right">
+
+				<li class="layui-nav-item layui-hide layui-show-md-inline-block">
+
+					<a href="javascript:;">
+						<!-- 用户头像 -->
+						<img src="//tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg"
+							th:src="${session.admin.headPortrait}" class="layui-nav-img">
+
+						<!-- 用户名 -->
+						<span th:text="${session.admin.username}"></span>
+
+					</a>
+
+					<dl class="layui-nav-child">
+						<dd>
+							<a href="login/out">切换账号</a>
+						</dd>
+						<dd>
+							<a href="login/out">退出登录</a>
+						</dd>
+					</dl>
+
+				</li>
+
+				<li class="layui-nav-item" lay-header-event="menuRight" lay-unselect>
+
+					<a href="javascript:;"> <i
+						class="layui-icon layui-icon-more-vertical"></i>
+				</a>
+
+				</li>
+
+			</ul>
+
+		</div>
+
+		<div class="layui-side layui-bg-black">
+
+			<div id="layui-side-scroll" class="layui-side-scroll">
+
+				<!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+
+				<ul id="layui-nav-tree" class="layui-nav layui-nav-tree"
+					lay-filter="test">
+
+					<li class="layui-nav-item layui-nav-itemed"><a class=""
+						href="javascript:;"> <i class="layui-icon layui-icon-service"
+							style="font-size: 15px; color: #FFFFFF;"></i> 管理员账号
+					</a>
+
+						<dl class="layui-nav-child">
+
+							<dd>
+								<a href="javascript:;" data-url="/html/admin/adminList.html">
+									<i class="layui-icon layui-icon-tabs"
+										style="font-size: 15px; color: #FFFFFF;">
+									</i>
+									账号列表
+								</a>
+							</dd>
+
+						</dl></li>
+
+					<li class="layui-nav-item layui-nav-itemed"><a class=""
+						href="javascript:;"> <i class="layui-icon layui-icon-username"
+							style="font-size: 15px; color: #FFFFFF;"></i> 用户信息维护
+					</a>
+
+						<dl class="layui-nav-child">
+
+							<dd>
+								<a href="javascript:;" data-url="/html/user/userList.html">
+									<i class="layui-icon layui-icon-user"
+									style="font-size: 15px; color: #FFFFFF;"></i> 用户列表
+								</a>
+							</dd>
+
+							<dd>
+								<a href="javascript:;" data-url="/html/user/userECharts.html">
+									<i class="layui-icon layui-icon-date"
+									style="font-size: 15px; color: #FFFFFF;"></i> 用户注册情况
+								</a>
+							</dd>
+
+						</dl></li>
+
+					<li class="layui-nav-item layui-nav-itemed"><a class=""
+						href="javascript:;"> <i class="layui-icon layui-icon-cart"
+							style="font-size: 15px; color: #FFFFFF;"></i> 商品管理
+					</a>
+
+						<dl class="layui-nav-child">
+
+							<dd>
+								<a href="javascript:;" data-url="/html/goods/goodsList.html">
+									<i class="layui-icon layui-icon-form"
+									style="font-size: 15px; color: #FFFFFF;"></i> 商品列表
+								</a>
+							</dd>
+
+						</dl></li>
+
+					<li class="layui-nav-item layui-nav-itemed"><a class=""
+						href="javascript:;">商品分类</a>
+
+						<dl class="layui-nav-child">
+
+							<dd>
+								<a href="javascript:;"
+									data-url="/html/category/categoryList.html"> <i
+									class="layui-icon layui-icon-list"
+									style="font-size: 15px; color: #FFFFFF;"></i> 分类列表
+								</a>
+							</dd>
+
+							<dd>
+								<a href="javascript:;"
+									data-url="/html/category/categoryECharts.html"> 
+									<i class="layui-icon layui-icon-chart-screen"
+										style="font-size: 15px; color: #FFFFFF;">
+									</i>
+									分类信息统计
+								</a>
+							</dd>
+
+						</dl></li>
+
+					<li class="layui-nav-item"><a href="">刷新页面</a></li>
+
+				</ul>
+			</div>
+		</div>
+
+		<!-- data-url的页面就加到这里 -->
+		<div class="layui-body">
+
+			<!-- 内容主体区域 -->
+			<div>内容主体区域。记得修改 layui.css 和 js 的路径</div>
+
+		</div>
+
+		<!-- 底部固定区域 -->
+		<div id="layui-footer" class="layui-footer">欢迎使用繁星商城后台管理系统</div>
+	</div>
+
+	<script src="/layui/layui.js"></script>
+
+	<script>
+		// 切换网页风格
+		function getCol(img, header, bgBlack, sideScroll, navTree, footer) {
+
+			// body的背景图片更换为 '+cole+';
+			document.getElementById("index-body").style.backgroundImage = 'url('
+					+ img + ')';
+
+			// 上边框
+			document.getElementById("layui-header").style.backgroundColor = header;
+
+			// 标题框
+			document.getElementById("layui-bg-black").style.backgroundColor = bgBlack;
+
+			// 左下剩余的
+			document.getElementById("layui-side-scroll").style.backgroundColor = sideScroll;
+
+			// 左上选择框
+			document.getElementById("layui-nav-tree").style.backgroundColor = navTree;
+
+			// 下边框
+			document.getElementById("layui-footer").style.backgroundColor = footer;
+
+		}
+
+		//JS 
+		layui
+				.use(
+						[ 'element', 'layer', 'util' ],
+						function() {
+							var element = layui.element, layer = layui.layer, util = layui.util;
+							// 这样才是全局变量，别的js中就不用定义了
+							$ = layui.$;
+
+							//左侧菜单的点击事件
+							$(".layui-side .layui-nav-tree dd a").click(
+									function() {
+										//获取被点击的a标签的data-url属性
+										var url = $(this).attr("data-url");
+										//调用open
+										open(url);
+									});
+							
+							
+							$(".layui-nav .layui-hide-xs a").click(
+									function() {
+										//获取被点击的a标签的data-url属性
+										var url = $(this).attr("data-url");
+										//调用open
+										open(url);
+									});
+							
+							
+							
+							
+							
+
+							//定义跳转的方法
+							open = function(url) {
+
+								if (!url) {
+									layer.msg("无效的url");
+
+								} else {
+
+									$(".layui-body>div").load(url);
+
+								}
+							}
+
+							//头部事件
+							util
+									.event(
+											'lay-header-event',
+											{
+												//左侧菜单事件
+												menuLeft : function(othis) {
+													layer.msg('展开左侧菜单的操作', {
+														icon : 0
+													});
+												},
+												menuRight : function() {
+													layer
+															.open({
+																type : 1,
+																content : '<div style="padding: 15px;">暂无信息</div>',
+																area : [
+																		'260px',
+																		'100%' ],
+																// 右上角
+																offset : 'rt',
+																anim : 5,
+																shadeClose : true
+															});
+												}
+											});
+
+						});
+	</script>
+</body>
+</html>

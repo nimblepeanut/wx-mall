@@ -1,0 +1,70 @@
+
+/**
+ * 主页样式
+ */
+
+/* 背景图片 */
+#index-body {
+
+	/* 路径 */
+	background-image: url('https://pic.imgdb.cn/item/6262dd31239250f7c5b561b2.png');
+	
+	/* no-repeat：不重复 */
+	background-repeat:no-repeat;
+	
+	/* 铺满 */
+	background-size: 100% 100%;
+	
+	/* 背景图片不会随着页面的滚动而滚动 */
+	background-attachment: fixed;
+
+}
+
+/* 左侧 开始 */
+
+/* 上边框 */
+#layui-header {
+	background-color: #1C4054;
+}
+
+/* 标题框 */
+#layui-bg-black {
+	background-color: #285B78;
+}
+
+/* 左下剩余的 */
+#layui-side-scroll {
+	background-color: #285B78;
+}
+
+/* 左上选择框 */
+#layui-nav-tree {
+	background-color: #285B78;
+}
+
+/* 下边框 */
+#layui-footer {
+	
+	background-color: #6A8A9D;
+	font-size: 24px;
+	text-align: center;
+}
+
+/* 左侧 结束 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

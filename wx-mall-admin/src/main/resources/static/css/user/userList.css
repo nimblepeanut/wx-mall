@@ -1,0 +1,87 @@
+
+
+.fdiv {
+	height: 3000px;
+}
+
+/* 标题 */
+.layui-elem-field legend {
+	font-size: 30px;
+	color: #EDCFAC;
+}
+
+/* 添加 开始 */
+.add {
+	float: right;
+	font-size: 18px;
+	margin-top: 10px;
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+/* 添加 结束 */
+
+/* 搜索 开始 */
+
+/* 搜索整体 */
+.layui-form {
+	float: right;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.layui-form-item {
+	
+	margin-bottom: -15px;
+	font-size: 18px;
+}
+
+/* 搜索按钮 */
+.layui-btn-normal {
+	margin-left: 20px;
+	margin-right: 50px;
+	background-color: #4E6EF2;
+	font-size: 18px;
+}
+
+/* 搜索 结束 */
+
+/* 居中 */
+table {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.layui-table th {
+	text-align: center;
+	height: 30px;
+	font-size: 20px;
+	color: #939393;
+}
+
+/* 行高 */
+td {
+	height: 90px;
+	font-size: 20px;
+	color: #939393;
+}
+
+.layui-table td {
+	height: 90px;
+	font-size: 20px;
+	color: #939393;
+}
+
+/* 图片 */
+.layui-table-img {
+	position: relative;
+	width: 90px;
+	height: 80px;
+	bottom: 25px;
+
+}
+
+td .layui-table-cell {
+	padding-top: 30px;
+	height: 90px;
+}
