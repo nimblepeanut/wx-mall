@@ -1,0 +1,82 @@
+<!-- layui -->
+<link rel="stylesheet" href="/layui/css/layui.css">
+
+<!-- 添加页面样式 -->
+<link rel="stylesheet" href="/css/admin/adminAdd.css">
+
+<script src="/layui/layui.js"></script>
+
+<!-- 添加ajax -->
+<script type="text/javascript" src="/js/admin/adminAdd.js"></script>
+
+<!-- 表单 开始 -->
+
+<form class="layui-form" id="adminAdd-form">
+
+	<!-- 用户名 -->
+	<div class="layui-form-item">
+
+		<label for="username" class="layui-form-label">用户名：</label>
+
+		<div class="layui-input-block">
+
+			<input id="username" type="text" name="username" 
+				placeholder="请输入长度大于3位、小于16位的用户名" class="layui-input">
+
+		</div>
+
+	</div>
+	
+	<!-- 密码 -->
+	<div class="layui-form-item">
+
+		<label for="password" class="layui-form-label">密码：</label>
+
+		<div class="layui-input-block">
+
+			<input id="password" type="text" name="password" 
+				placeholder="请长度大于3位、小于16位的输入的密码" class="layui-input">
+
+		</div>
+
+	</div>
+
+	<!-- 头像的链接 -->
+	<div class="layui-form-item">
+
+		<label for="headPortrait" class="layui-form-label">图片链接：</label>
+
+		<div class="layui-input-block">
+
+			<!-- 失去焦点事件 onblurfun() -->
+			<input onblur="onblurfun()" id="headPortrait" type="text" name="headPortrait"
+				placeholder="请输入头像的链接" class="layui-input">
+
+		</div>
+
+	</div>
+
+	<div class="tips">输入后请点击任意位置，检验地址的格式是否正确</div>
+
+	<!-- 提交 -->
+	<div class="layui-form-item">
+
+		<label class="layui-form-label"></label>
+
+		<div class="layui-input-block">
+
+			<button type="submit" class="layui-btn" lay-submit
+				lay-filter="adminAdd">立即添加</button>
+
+		</div>
+
+	</div>
+
+	<!-- 预览图片 -->
+	<img id="img">
+
+</form>
+
+<!-- 表单 结束 -->
+
+

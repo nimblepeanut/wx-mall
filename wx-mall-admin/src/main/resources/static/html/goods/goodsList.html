@@ -1,0 +1,138 @@
+
+<!-- 引入js -->
+<script src="/js/goods/goodsList.js"></script>
+
+<!-- 引入css -->
+<link rel="stylesheet" href="/css/goods/goodsList.css">
+
+<!-- 整个页面 -->
+<div class="fdiv">
+
+	<!-- 标题 -->
+	
+	<fieldset class="layui-elem-field layui-fieLd-title">
+
+		<legend>商品列表</legend>
+
+	</fieldset>
+	
+	<!-- 添加 开始 -->
+
+	<button type="submit" class="layui-btn layui-btn-warm add" 
+		lay-submit lay-filter="add">添加商品</button>
+		
+	<!-- 添加 结束 -->
+
+	<!-- 查询 -->
+	<form class="layui-form" id="goodsSearch">
+
+		<div class="layui-form-item">
+
+			<!-- 分类 开始 -->
+
+			<div class="layui-input-inline">
+
+				<select class="category" name="categoryId" lay-filter="categoryId"></select>
+
+			</div>
+
+			<!-- 分类 结束 -->
+
+			<!-- 输入 开始 -->
+
+			<div class="layui-input-inline">
+
+				<input type="text" name="name" placeholder="请输入关键字"
+					class="layui-input">
+
+			</div>
+
+			<!-- 输入 结束 -->
+
+			<!-- 查询按钮 开始 -->
+
+			<div class="layui-input-inline">
+
+				<button type="submit" class="layui-btn layui-btn-normal" lay-submit
+					lay-filter="search">搜索一下</button>
+
+			</div>
+
+			<!-- 查询按钮 结束 -->
+
+		</div>
+
+	</form>
+
+	<!-- 自定义图片样式 -->
+	<script type="text/html" id="goodsPicture">
+
+		{{# layui.each(d.goodsPicture, function(index, item){ }} 
+			<img src="{{item.picture}}" class="layui-table-img">
+		{{# }); }}
+		
+	</script>
+
+	<!-- 工具条 -->
+	<script type="text/html" id="operation">
+		<a href="javascript:;" class="layui-btn layui-btn-danger" lay-event="delete">下架</a>
+		<a href="javascript:;" class="layui-btn" lay-event="edit">编辑</a>
+		<a href="javascript:;" 	class="layui-btn layui-btn-normal" lay-event="pictureAdd">添加图片</a>
+	</script>
+
+	<!-- 表格 -->
+	<table id="goodsList" lay-filter="goodsList"></table>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

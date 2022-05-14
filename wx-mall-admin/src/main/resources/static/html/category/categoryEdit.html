@@ -1,0 +1,77 @@
+
+
+<!-- layui -->
+<link rel="stylesheet" href="/layui/css/layui.css">
+
+<!-- 编辑页面样式 -->
+<link rel="stylesheet" href="/css/category/categoryEdit.css">
+
+<script src="/layui/layui.js"></script>
+
+<!-- 弹窗相关 -->
+<script type="text/javascript" src="/js/category/categoryList.js"></script>
+
+<!-- 要修改的数据填充 -->
+<script type="text/javascript" src="/js/category/categoryEdit.js"></script>
+
+<!-- 兄弟,你想用put提交表单吗? -->
+
+<form class="layui-form" id="form-categoryEdit">
+
+	<!-- 隐藏域 -->
+	<input type="hidden" name="id">
+
+	<!-- 分类名称 -->
+	<div class="layui-form-item">
+
+		<!-- 
+			for="name" 和下面的 id="name" 配合，
+			点击，输入框获取焦点
+			 -->
+		<label for="name" class="layui-form-label">分类名称：</label>
+
+		<div class="layui-input-block">
+
+			<input id="name" type="text" name="name" placeholder="请输入分类名称"
+				class="layui-input">
+
+		</div>
+
+	</div>
+
+	<!-- 分类图片的链接 -->
+	<div class="layui-form-item">
+
+		<label for="picture" class="layui-form-label">图片链接：</label>
+
+		<div class="layui-input-block">
+
+			<input id="picture" type="text" name="picture"
+				placeholder="请输入分类图片的链接" class="layui-input">
+
+		</div>
+
+	</div>
+
+	<!-- 提交 -->
+	<div class="layui-form-item">
+
+		<label class="layui-form-label"></label>
+
+		<div class="layui-input-block">
+
+			<button type="submit" class="layui-btn" lay-submit
+				lay-filter="categoryEdit">立即修改</button>
+
+		</div>
+
+	</div>
+
+</form>
+
+<!-- 预览图片 -->
+<img id="img">
+
+
+
+

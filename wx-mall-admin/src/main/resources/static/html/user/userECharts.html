@@ -1,0 +1,115 @@
+
+<!-- 商品分类可视化图表 -->
+
+<!-- 引入layui样式 -->
+<link rel="stylesheet" href="/layui/css/layui.css">
+
+<!-- 引入css样式 -->
+<link rel="stylesheet" href="/css/user/userEcharts.css">
+
+<!-- 引入layui js -->
+<link rel="stylesheet" href="/layui/layui.js">
+
+<!-- 引入echarts js -->
+<script src="/js/echarts.js"></script>
+
+<!-- 引入js 结束 -->
+
+<!-- 热力图 -->
+<h2 class="first">2022年用户注册热力分布图</h2>
+
+<div id="user-countBar" style="width: 100%; height: 300px;"></div>
+
+<!-- 折线图 开始 -->
+
+<h2 class="second">用户注册日期折线图</h2>
+
+<form class="layui-form">
+
+	<!-- 开始日期 -->
+	<div class="layui-form-item">
+	
+	<div class="time">
+
+		<label for="start" class="layui-form-label">开始时间：</label>
+
+		<div class="layui-input-block">
+
+			<input type="text" placeholder="请输入开始时间" 
+  				name="start" id="start" class="layui-input">
+
+		</div>
+
+	</div>
+	
+	<!-- 结束日期 -->
+
+	<div class="time">	
+
+		<label for="end" class="layui-form-label">结束时间：</label>
+
+		<div class="layui-input-block">
+
+			<input type="text" placeholder="请输入结束时间" 
+  				name="end" id="end" class="layui-input">
+
+		</div>
+
+	</div>
+	
+	<!-- 提交 -->
+
+		<div class="">
+
+			<button type="submit" class="layui-btn" lay-submit 
+				lay-filter="echartsStart">点击查看</button>
+
+		</div>
+
+	</div>
+
+</form>
+
+<!-- 引入js -->
+<script src="/js/user/userECharts.js"></script>
+
+<script>
+
+// layui 日期选择器
+layui.use('laydate', function(){
+	
+  var laydate = layui.laydate;
+  
+  // 执行一个laydate实例
+  laydate.render({
+	// 指定元素
+    elem: '#start, #end'
+  });
+});
+ 
+</script>
+
+<div id="user-line" style="width: 100%; height: 500px;"></div>
+
+<div style="width: 100%; height: 100px; background-color: #ffffff;"></div>
+
+<!-- 折线图 结束 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

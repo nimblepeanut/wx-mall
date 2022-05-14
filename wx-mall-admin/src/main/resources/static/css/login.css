@@ -1,0 +1,65 @@
+
+body {
+	
+	/* 路径 */
+	background-image:url('https://gimg2.baidu.com/image_search/src=http%3A%2F%2Ffile.moyublog.com%2Fd%2Ffile%2F2020-12-01%2F61344a2691eecd1e5a951796c8d27918.jpg&refer=http%3A%2F%2Ffile.moyublog.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1653297522&t=b4034b85f43a761be842ff6390c55a82');
+		
+	/* no-repeat：不重复 */
+	background-repeat:no-repeat;
+	
+	/* 铺满 */
+	background-size: 100% 100%;
+	
+	/* 背景图片不会随着页面的滚动而滚动 */
+	background-attachment: fixed;
+}
+
+form {
+	width: 500px;
+	margin: 100px auto;
+	margin-top: 150px;
+	background-color: #FFF;
+	padding-bottom: 30px;
+	padding-left: 20px;
+	border-radius: 15px;
+	
+}
+
+h1 {
+	text-align: center;
+	padding: 30px;
+}
+
+.layui-form-item .verCode {
+	width: 100px;
+	cursor: pointer;
+	padding-left: 20px;
+}
+
+.layui-form-item .layui-input-block {
+	margin-top: 30px;
+	margin-left: 100px;
+}
+
+.error {
+	font-size: 18px;
+	color: red;
+}
+
+button {
+	margin-left: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

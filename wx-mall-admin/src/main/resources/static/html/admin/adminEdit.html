@@ -1,0 +1,85 @@
+
+
+<!-- layui -->
+<link rel="stylesheet" href="/layui/css/layui.css">
+
+<!-- 编辑页面样式 -->
+<link rel="stylesheet" href="/css/admin/adminEdit.css">
+
+<script src="/layui/layui.js"></script>
+
+<!-- 弹窗相关 -->
+<script type="text/javascript" src="/js/admin/adminList.js"></script>
+
+<!-- 要修改的数据填充 -->
+<script type="text/javascript" src="/js/admin/adminEdit.js"></script>
+
+<form class="layui-form" id="form-adminEdit">
+
+	<!-- 隐藏域  id-->
+	<input type="hidden" name="id">
+
+	<!-- 用户名 -->
+	<div class="layui-form-item">
+
+		<label for="username" class="layui-form-label">用户名：</label>
+
+		<div class="layui-input-block">
+
+			<input id="username" type="text" name="username" placeholder="请输入用户名"
+				class="layui-input">
+
+		</div>
+
+	</div>
+	
+	<!-- 密码 -->
+	<div class="layui-form-item">
+
+		<label for="password" class="layui-form-label">密码：</label>
+
+		<div class="layui-input-block">
+
+			<input id="password" type="text" name="password" 
+				placeholder="请输入MD5加密的密码" class="layui-input">
+
+		</div>
+
+	</div>
+
+	<!-- 头像的链接 -->
+	<div class="layui-form-item">
+
+		<label for="headPortrait" class="layui-form-label">图片链接：</label>
+
+		<div class="layui-input-block">
+
+			<input id="headPortrait" type="text" name="headPortrait"
+				placeholder="请输入头像的链接" class="layui-input">
+
+		</div>
+
+	</div>
+
+	<!-- 提交 -->
+	<div class="layui-form-item">
+
+		<label class="layui-form-label"></label>
+
+		<div class="layui-input-block">
+
+			<button type="submit" class="layui-btn" lay-submit
+				lay-filter="adminEdit">立即修改</button>
+
+		</div>
+
+	</div>
+
+</form>
+
+<!-- 预览图片 -->
+<img id="img">
+
+
+
+

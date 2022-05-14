@@ -1,0 +1,81 @@
+
+/**
+ * 编辑页面样式
+ */
+
+/* 全局 */
+body {
+	font-size: 18px;
+}
+
+/* 表单 */
+form {
+	font-size: 24px;
+	width: 500px;
+		
+	margin-top: 100px;
+	margin-left: -10px;
+}
+
+/* 整体的输入部分 */
+.layui-input-block {
+	margin-bottom: 20px;
+}
+
+/* label 标签 */
+.layui-form-label {
+	width: 150px;
+}
+
+/* 输入框 */
+.layui-input {
+	width: 300px;
+}
+
+/* 提示语 */
+.tips {
+	color: #626262;
+	font-size: 16px;
+	font-style:oblique;
+	
+	margin-top: -30px;
+	margin-left: 125px;
+	margin-bottom: 20px;
+}
+
+/* 按钮 */
+.layui-btn {
+	margin-left: 60px;
+	margin-bottom: 10px;
+	background-color: #488CB6;
+}
+
+/* 预览图片 */
+img {
+	width: 225px;
+	height: 200px;
+
+	/* 绝对定位 */
+	position: absolute;
+	top: 50px;
+	left: 520px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

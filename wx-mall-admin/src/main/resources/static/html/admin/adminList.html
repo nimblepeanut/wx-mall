@@ -1,0 +1,117 @@
+
+<!-- 引入js -->
+<script src="/js/admin/adminList.js"></script>
+
+<!-- 引入css -->
+<link rel="stylesheet" href="/css/admin/adminList.css">
+
+<!-- 整个页面 -->
+<div class="fdiv">
+
+	<!-- 标题 -->
+	<fieldset class="layui-elem-field layui-fieLd-title">
+
+		<legend>账号列表</legend>
+
+	</fieldset>
+
+	<button type="submit" class="layui-btn layui-btn-warm add" lay-submit
+		lay-filter="add">添加管理员</button>
+
+	<!-- 查询 -->
+	<form class="layui-form" id="adminSearch">
+
+		<div class="layui-form-item">
+
+			<div class="layui-input-inline">
+
+				<input type="text" name="name" placeholder="请输入关键字"
+					class="layui-input">
+
+			</div>
+
+			<div class="layui-input-inline">
+
+				<button type="submit" class="layui-btn layui-btn-normal" lay-submit
+					lay-filter="search">搜索一下</button>
+
+			</div>
+
+		</div>
+
+	</form>
+
+	<!-- id
+	
+	<script type="text/html" id="titleTpl">
+		{{d.LAY_TABLE_INDEX+1}}
+	</script>
+	
+	 -->
+
+	<!-- 自定义图片样式 -->
+	<script type="text/html" id="pic">
+		<img src="{{d.headPortrait}}" class="layui-table-img">
+	</script>
+
+	<!-- 工具条 -->
+	<script type="text/html" id="operation">
+		<a href="javascript:;" class="layui-btn layui-btn-danger" lay-event="delete">删除</a>
+		<a href="javascript:;" class="layui-btn" lay-event="edit">编辑</a>
+	</script>
+
+	<table id="adminList" lay-filter="adminList"></table>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
