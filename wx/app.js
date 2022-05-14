@@ -6,8 +6,7 @@ App({
    onLaunch() {
 
       // 背景音乐
-
-      // this.setAudioPlay()
+      this.setAudioPlay()
 
       // 展示本地存储能力
       const logs = wx.getStorageSync('logs') || []
@@ -44,7 +43,6 @@ App({
    },
 
    // 背景音乐 秋日私语
-
    setAudioPlay() {
       const adctx = wx.createInnerAudioContext()
       adctx.autoplay = true
