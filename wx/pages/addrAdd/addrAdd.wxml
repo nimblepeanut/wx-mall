@@ -1,0 +1,81 @@
+<!-- 表单-收货信息 开始 -->
+
+<!-- bindsubmit：携带 form 中的数据触发 submit 事件 addrAdd-->
+<form bindsubmit="addrAdd">
+
+   <!-- 收货人 开始 -->
+   <view class="whole">
+
+      <label for="consignee">收货人</label>
+
+      <input type="text" name="consignee" id="consignee" class="" placeholder="名字" />
+
+   </view>
+   <!-- 收货人 结束 -->
+
+   <!-- 手机号码 开始 -->
+   <view class="whole">
+
+      <label for="phone">手机号码</label>
+
+      <input type="text" name="phone" id="phone" class="" placeholder="手机号" />
+
+   </view>
+   <!-- 手机号码 结束 -->
+
+   <!-- 所在地区 开始 -->
+   <view class="whole">
+
+      <label for="address">所在地区</label>
+
+      <input value="{{address}}" type="text" name="address" id="address" class="" placeholder="省、市、区、街道" />
+
+   </view>
+   <!-- 所在地区 结束 -->
+
+   <!-- 详细地址 开始 -->
+   <view class="whole">
+
+      <label for="name">详细地址</label>
+
+      <input value="{{name}}" type="text" name="name" id="name" class="" placeholder="小区/乡村名称" />
+
+   </view>
+   <!-- 详细地址 结束 -->
+
+   <!-- 选择收货地址 开始 -->
+
+   <!-- 点击调用 getLocation 方法选取地址 -->
+   <navigator bindtap="getLocation" hover-class="none" class="location">
+   
+      <!-- 文字 -->
+      <view class="location-title">选择收货地址</view>
+
+      <!-- 图标 -->
+      <image src="/icons/定位.png"></image>
+
+   </navigator>
+
+   <!-- 选择收货地址 结束 -->
+
+   <button class="submit" formType="submit">保存</button>
+
+   <button class="reset" formType="reset">重置</button>
+
+</form>
+
+<!-- 表单-收货信息 结束 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+

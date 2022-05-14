@@ -1,0 +1,73 @@
+/* 背景图片 */
+.background {
+   width: 100vw;
+   height: 100vh;
+}
+
+/* 表单 开始 */
+
+/* 表单 */
+form {
+   width: 80vw;
+   font-size: 21px;
+   border-radius: 20px;
+
+   background-color: #ffffff;
+   /* background-image: url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.51yuansu.com%2Fpic3%2Fcover%2F03%2F69%2F35%2F5bea164d55484_610.jpg&refer=http%3A%2F%2Fpic.51yuansu.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1654497185&t=9378f319a51a36b9e2404fe5997729e4); */
+  
+
+   /* 设置图片的位置 */
+   background-position: center;
+   background-size: cover;
+
+   /* 绝对定位 */
+   position: absolute;
+   left: 10%;
+   top: 18%;
+}
+
+/* 标题 */
+.title {
+   text-align: center;
+   font-size: 26px;
+   margin-top: 2vh;
+   margin-bottom: 6vh;
+}
+
+/* 输入栏 开始 */
+/* 整体 */
+.whole {
+   width: 60vw;
+   float: left;
+   margin-left: 14vw;
+   margin-bottom: 3vh;
+}
+
+label {
+   float: left;
+   margin-left: -11vw;
+}
+
+input {
+   font-size: 16px;
+   width: 40vw;
+   /* border: solid 1px; */
+   border-radius: 5px;
+   height: 5vh;
+   padding-left: 2vw;
+   background-color: #e4e3e3;
+}
+
+/* 输入栏 结束 */
+
+button {
+   width: 30vw;
+   height: 5vh;
+   /* 垂直 */
+   line-height: 5vh;
+   margin-bottom: 3vh;
+   padding-bottom: 5vh;
+}
+
+
+/* 表单 结束 */

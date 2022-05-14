@@ -1,0 +1,22 @@
+
+<!-- 自定义组件-搜索 -->
+
+<!-- 搜索 开始 -->
+
+<view class="search">
+
+<!-- 跳转 开始 -->
+<navigator hover-class="none" url="/pages/search/search">
+
+   搜索商品
+
+   <view class="search-image">
+      <image src="/icons/搜索.png"></image>
+   </view>
+
+</navigator>
+<!-- 跳转 结束 -->
+
+</view>
+
+<!-- 搜索 结束 -->

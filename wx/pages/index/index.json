@@ -1,0 +1,8 @@
+{
+    "component": true,
+    "usingComponents": {
+      "search":"/components/search/search"
+   },
+    "navigationBarTitleText": "繁星商城",
+    "navigationBarBackgroundColor": "#fff"
+}

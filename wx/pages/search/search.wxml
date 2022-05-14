@@ -1,0 +1,45 @@
+<!-- 输入框 开始 -->
+
+<view class="search_row">
+
+   <input value="{{inpValue}}" placeholder="请输入您要搜索的商品" bindinput="handleInput"> </input>
+
+   <button bindtap="handleCancel" hidden="{{!isFocus}}">取消</button>
+
+</view>
+
+<!-- 输入框 结束 -->
+
+<!-- 商品列表 开始 -->
+
+<view class="search_content">
+
+   <navigator url="/pages/detailed/detailed?goodsId={{item.id}}" class="search_item" wx:for="{{goodsList}}" wx:key="goods_id">
+
+      <!-- 图片 -->
+      <image src="{{item.goodsPicture[0].picture}}"></image>
+
+      <!-- 文字-整体 开始 -->
+      <view class="whole">
+
+
+         <!-- 名称 -->
+         <view class="name">{{item.name}}</view>
+
+         <!-- 价格 -->
+         <view class="price">
+            <view class="symbol">￥</view>
+            {{item.price}}
+         </view>
+
+         <view class="count" wx:if="{{item.count>0}}">库存{{item.count}}件</view>
+         <view class="count" wx:if="{{item.count<=0}}">缺货</view>
+
+      </view>
+      <!-- 文字-整体 结束 -->
+
+   </navigator>
+
+</view>
+
+<!-- 商品列表 结束 -->

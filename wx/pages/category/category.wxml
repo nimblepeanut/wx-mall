@@ -1,0 +1,83 @@
+<!-- 自定义组件-搜索 开始 -->
+
+<search></search>
+
+<!-- 自定义组件-搜索 结束 -->
+
+<!-- 商品分类-整体 开始 -->
+
+<view class="whole">
+
+   <!-- 左侧 开始 -->
+
+   <scroll-view scroll-y class="left">
+
+      <!-- 分类循环 开始 -->
+      <!-- 点击 -->
+      <!-- 点击样式 click -->
+      <!-- 点击事件 clickCategory -->
+      <!-- 传递参数  当前的 index-->
+      <view class="categoryName {{index == currentIndex ? 'click' : ''}}" bindtap="clickCategory" data-index="{{index}}" wx:for="{{categoryList}}" wx:key="id">
+
+         <!-- 分类名 -->
+         {{item.name}}
+
+      </view>
+      <!-- 分类循环 结束 -->
+
+   </scroll-view>
+
+   <!-- 左侧 结束 -->
+
+   <!-- 右侧 开始 -->
+
+   <scroll-view scroll-top="{{scrollTop}}" scroll-y class="right">
+
+      <!-- 商品循环 开始 -->
+
+      <view wx:for="{{goodsList}}">
+
+         <!-- 单个分类块里的商品 开始 -->
+
+         <view class="goods-list">
+
+            <!-- 分类标题 开始 -->
+            <view class="category-title" wx:if="{{index==0}}">
+               <text class="title-symbol">/</text>
+               <text>{{item.category.name}}</text>
+               <text class="title-symbol">/</text>
+            </view>
+            <!-- 分类标题 结束 -->
+
+            <!-- 商品 开始 -->
+
+            <view class="goods">
+
+               <navigator url="/pages/detailed/detailed?goodsId={{item.id}}">
+
+                  <!-- 商品图片 -->
+                  <image src="{{item.goodsPicture[0].picture}}"></image>
+
+                  <!-- 商品名 -->
+                  <view class="goods-name">{{item.name}}</view>
+
+               </navigator>
+               <!-- 商品 结束 -->
+
+            </view>
+
+            <!-- 单个分类块里的商品 结束 -->
+
+         </view>
+
+         <!-- 商品循环 结束 -->
+      </view>
+      
+
+   </scroll-view>
+
+   <!-- 右侧 结束 -->
+
+</view>
+
+<!-- 商品分类-整体 结束 -->

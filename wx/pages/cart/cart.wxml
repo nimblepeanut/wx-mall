@@ -1,0 +1,78 @@
+<!-- 商品列表 开始 -->
+
+<view class="search_content">
+
+   <!-- <navigator url="/pages/detailed/detailed?goodsId={{item.goods.id}}" class="search_item" wx:for="{{cartList}}" wx:key="id"> -->
+
+   <view class="search_item" wx:for="{{cartList}}" wx:key="id">
+
+      <!-- 图片 -->
+      <image src="{{item.goods.goodsPicture[0].picture}}"></image>
+
+      <!-- 文字-整体 开始 -->
+      <view class="whole">
+
+         <!-- 名称 -->
+         <view class="name">{{item.goods.name}}</view>
+
+         <!-- 价格 -->
+         <view class="price">
+            <view class="symbol">￥</view>
+            {{item.goods.price}}
+         </view>
+
+         <!-- 库存 -->
+         <view class="count" wx:if="{{item.goods.count>0}}">库存{{item.goods.count}}件</view>
+         <view class="count" wx:if="{{item.goods.count<=0}}">缺货</view>
+
+         <!-- 数量 -->
+         <view class="num">
+
+            <!-- -1 -->
+            <view bindtap="handEditNum" data-id="{{item.id}}" data-operation="{{-1}}" class="num-symbol">-</view>
+
+            <!-- 当前数量 -->
+            <view class="num-goods">{{item.count}}</view>
+
+            <!-- +1 -->
+            <view bindtap="handEditNum" data-id="{{item.id}}" data-operation="{{1}}" class="num-symbol">+</view>
+
+         </view>
+
+      </view>
+      <!-- 文字-整体 结束 -->
+
+   </view>
+
+   <!-- </navigator> -->
+
+</view>
+
+<!-- 商品列表 结束 -->
+
+<!-- 底部总价格和结算 开始 -->
+<view class="footer_tool">
+
+   <view class="freight">运费另算</view>
+
+   <!-- 总价格 -->
+   <view class="total_price_wrap">
+
+      <view class="total_price">
+
+         合计: <text class="total_price_text">￥{{totalPrice}}</text>
+
+      </view>
+
+   </view>
+
+   <!-- 结算 -->
+   <view class="order_pay_wrap" bindtap="handlePay">
+
+      结算({{totalNum}})
+
+   </view>
+
+</view>
+
+<!-- 底部总价格和结算 结束 -->

@@ -1,0 +1,47 @@
+<!-- 背景图片 开始 -->
+
+<view>
+
+   <image mode="aspectFill" class="background" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.ixintu.com%2Fdownload%2Fjpg%2F201912%2Fbaaafb492ea001f281f2cc8214fabf9a.jpg%21con0&refer=http%3A%2F%2Fimg.ixintu.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1654953565&t=40583ffab358ee9bb1e2f86eae229140">
+   </image>
+
+</view>
+
+<!-- 背景图片 结束 -->
+
+<!-- 登录 开始 -->
+
+<!-- bindsubmit：携带 form 中的数据触发 submit 事件 recharge-->
+<form bindsubmit="recharge">
+
+   <view class="title">
+      请确认充值信息
+   </view>
+
+   <!-- 账号 开始 -->
+   <view class="whole">
+
+      <label>确认账号：</label>
+
+      <input disabled="disabled" value="{{username}}" type="text" name="username" />
+
+   </view>
+   <!-- 账号 结束 -->
+
+   <!-- 金额 开始 -->
+   <view class="whole">
+
+      <label for="rechargeMoney">充值金额：</label>
+
+      <input type="number" name="rechargeMoney" id="rechargeMoney" placeholder="请输入充值金额" />
+
+   </view>
+   <!-- 金额 结束 -->
+
+   <button bindtap="recharge" type="primary" formType="submit">微信充值</button>
+
+   <button formType="reset">重置金额</button>
+
+</form>
+
+<!-- 登录 结束 -->

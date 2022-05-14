@@ -1,0 +1,88 @@
+{
+   "setting": {
+      "compileHotReLoad": true
+   },
+   "condition": {
+      "miniprogram": {
+         "list": [
+            {
+               "name": "登录",
+               "pathName": "pages/login/login",
+               "query": "",
+               "scene": null
+            },
+            {
+               "name": "繁星商场",
+               "pathName": "pages/index/index",
+               "query": "",
+               "launchMode": "default",
+               "scene": null
+            },
+            {
+               "name": "购物车",
+               "pathName": "pages/cart/cart",
+               "query": "",
+               "scene": null
+            },
+            {
+               "name": "商品分类",
+               "pathName": "pages/category/category",
+               "query": "",
+               "launchMode": "default",
+               "scene": null
+            },
+            {
+               "name": "商品详情",
+               "pathName": "pages/detailed/detailed",
+               "query": "",
+               "launchMode": "default",
+               "scene": null
+            },
+            {
+               "name": "我的账号",
+               "pathName": "pages/personal/personal",
+               "query": "",
+               "launchMode": "default",
+               "scene": null
+            },
+            {
+               "name": "搜索中心",
+               "pathName": "pages/search/search",
+               "query": "",
+               "launchMode": "default",
+               "scene": null
+            },
+            {
+               "name": "注册",
+               "pathName": "pages/register/register",
+               "query": "",
+               "launchMode": "default",
+               "scene": null
+            },
+            {
+               "name": "收货地址",
+               "pathName": "pages/addr/addr",
+               "query": "",
+               "launchMode": "default",
+               "scene": null
+            },
+            {
+               "name": "添加收货地址",
+               "pathName": "pages/addrAdd/addrAdd",
+               "query": "",
+               "launchMode": "default",
+               "scene": null
+            },
+            {
+               "name": "充值中心",
+               "pathName": "pages/recharge/recharge",
+               "query": "",
+               "launchMode": "default",
+               "scene": null
+            }
+         ]
+      }
+   },
+   "projectname": "wx",
+   "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html"
+}

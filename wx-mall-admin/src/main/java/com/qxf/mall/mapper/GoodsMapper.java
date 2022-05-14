@@ -47,11 +47,13 @@ public interface GoodsMapper {
 				
 			"</where>",
 			
+			"limit #{start}, #{lt}",
+			
 		"</script>"
 			
 //		"select ", 
 //		"id, category_id, name, price, count, introduce, recommend, state",
-//		"from goods where name like '%${name}%' "
+//		"from goods where name like '%${name}%' limit #{start}, #{lt}"
 	})
 	@Results({
 		
@@ -69,7 +71,7 @@ public interface GoodsMapper {
 		)
 	
 	})
-	List<Goods> select(@Param("categoryId") Integer categoryId, @Param("name") String name);
+	List<Goods> select(@Param("start") Integer start, @Param("lt") Integer limit, @Param("categoryId") Integer categoryId, @Param("name") String name);
 	
 	/**
 	 * 添加

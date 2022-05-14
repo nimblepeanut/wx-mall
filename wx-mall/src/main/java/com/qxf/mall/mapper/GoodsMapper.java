@@ -4,11 +4,9 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Many;
 import org.apache.ibatis.annotations.One;
-import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
 
 import com.qxf.mall.entity.Goods;
 
@@ -192,20 +190,6 @@ public interface GoodsMapper {
 		
 	})
 	List<Goods> selectByName(String name);
-
-	/**
-	 * 	付款，
-	 * 	根据商品修改库存
-	 * @param count
-	 * @param integer 
-	 */
-	@Update({
-		"update goods ",
-		"set ",
-		"count = count - #{count} ",
-		"where id = #{id} ",
-	})
-	void updateCount(@Param("id") Integer id, @Param("count") Integer count);
 
 	
 	

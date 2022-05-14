@@ -32,8 +32,8 @@ public interface CategoryMapper {
 	 * @param name
 	 * @return
 	 */
-	@Select("select id, name, picture from category where name like '%${name}%'")
-	List<Category> selectName(String name);
+	@Select("select id, name, picture from category where name like '%${name}%' limit #{start}, #{lt}")
+	List<Category> selectName(@Param("start") Integer start, @Param("lt") Integer limit, @Param("name") String name);
 	
 	/**
 	 * 	根据id查询，商品一对一查分类id和名称,

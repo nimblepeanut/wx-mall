@@ -1,0 +1,145 @@
+page {
+   background-color: #dedede;
+   padding: 20rpx;
+}
+
+.search_content {
+   width: 95vw;
+   margin-top: 1vh;
+   margin-bottom: 8vh;
+}
+
+.search_content .search_item {
+   margin-bottom: 1vh;
+   background-color: #fff;
+   font-size: 26rpx;
+   padding: 15rpx 10rpx;
+   border-bottom: 1rpx solid #ccc;
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+}
+
+/* 图片 */
+image {
+   float: left;
+   width: 25vw;
+   height: 25vw;
+   margin-left: 5vw;
+}
+
+/* 整体 */
+.whole {
+   float: left;
+   margin-left: 5vw;
+}
+
+/* 名称 */
+.name {
+   margin-top: 1vh;
+   font-size: 21px;
+}
+
+/* 价格 */
+.price {
+   margin-top: 5vh;
+   margin-bottom: -1vh;
+   font-size: 21px;
+   color: #FF5703;
+}
+
+/* 符号 */
+.symbol {
+   float: left;
+   font-size: 17px;
+   padding-top: 0.8vh;
+}
+
+/* 库存 */
+.count {
+   font-size: 17px;
+   color: rgb(168, 168, 168);
+   padding-top: 1.3vh;
+   padding-right: 2vw;
+   padding-left: 33vw;
+   margin-top: -12vh;
+}
+
+/* 数量 */
+.num {
+   font-size: 17px;
+   padding-top: 1.3vh;
+   padding-right: 2vw;
+   padding-left: 33vw;
+   /* margin-top: -12vh; */
+   text-align: center;
+}
+
+.num-symbol {
+   float: left;
+   border: solid 1px;
+   width: 6vw;
+   height: 6vw;
+}
+
+.num-goods {
+   float: left;
+   padding: 0 2vw;
+   width: 5vw;
+   height: 5vw;
+}
+
+/* 底部总价格和结算 开始 */
+
+.footer_tool {
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 90rpx;
+   background-color: #fff;
+   display: flex;
+   border-top: 1rpx solid #ccc;
+}
+
+.footer_tool .all_chk_wrap {
+   flex: 2;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.freight {
+   padding-top: 4vh;
+   color: #717171;
+}
+
+/* 总价-整体 */
+.footer_tool .total_price_wrap {
+   flex: 5;
+   padding-right: 15rpx;
+   text-align: right;
+   padding-top: 2vh;
+}
+
+.footer_tool .total_price_wrap .total_price .total_price_text {
+   color: #FF5703;
+   font-size: 25px;
+   font-weight: 600;
+
+}
+
+.footer_tool .order_pay_wrap {
+   flex: 3;
+   background-color: #FF5703;
+   color: #fff;
+   font-size: 32rpx;
+   font-weight: 600;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+/* 底部总价格和结算 结束 */
+
+

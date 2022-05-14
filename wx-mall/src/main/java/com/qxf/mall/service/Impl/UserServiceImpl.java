@@ -115,14 +115,10 @@ public class UserServiceImpl implements UserService {
 	 * 	隔离级别：串行化
 	 */
 	@Override
-	// 因为涉及到金钱，
 	// 数据库事物的隔离级别调到串行化，
 	// 使用表级共享锁：sql语句执行一句就加一个锁，
 	// 报错就回滚
-	@Transactional(
-		isolation = Isolation.SERIALIZABLE, 
-		rollbackFor = Exception.class
-	)
+	@Transactional(isolation = Isolation.SERIALIZABLE, rollbackFor = Exception.class)
 	public User recharge(Integer userId, BigDecimal money) {
 
 		//修改余额
@@ -131,15 +127,6 @@ public class UserServiceImpl implements UserService {
 		// 重新查询用户
 		return userMapper.selectById(userId);
 		
-	}
-
-	/**
-	 * 	根据用户id查，
-	 * 	清空购物车后的重查用户信息
-	 */
-	@Override
-	public User seleById(Integer id) {
-		return userMapper.selectById(id);
 	}
 	
 	

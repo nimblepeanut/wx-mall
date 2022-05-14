@@ -1,0 +1,158 @@
+
+/* 背景颜色 */
+page {
+   background-color: #F4F4F4;
+}
+
+/* 跳转 */
+.recommendList navigator {
+   display: flex;
+   height: 100%;
+   align-items: center;
+   justify-content: center;
+   background-color: #fff;
+   border-radius: 30rpx;
+   text-align: center;
+}
+
+.navigation navigator {
+   display: flex;
+   height: 100%;
+   align-items: center;
+   justify-content: center;
+   background-color: #fff;
+   border-radius: 30rpx;
+   text-align: center;
+}
+
+/* 推荐-轮播图 开始 */
+
+.recommendList swiper {
+   width: 100vw;
+   height: 45vh;
+}
+
+.recommendList image {
+   height: 40vh;
+}
+
+/* 推荐-轮播图 结束 */
+
+/* 分类导航 开始 */
+
+/* 整体 */
+.navigation {
+   height: 20vh;
+   display: flex;
+   margin-top: 4vh;
+}
+
+/* 跳转 */
+.navigation navigator {
+   /* padding: 20rpx; */
+   display: block;
+   width: 5vw;
+   flex: 1;
+   height: 15vh;
+   background-color: #F4F4F4;
+}
+
+/* 图片 */
+.navigation image {
+   width: 12vw;
+   height: 8vh;
+}
+
+/* 名称 */
+.navigation .name {
+   text-align: center;
+}
+
+/* 分类导航 结束 */
+
+/* 推荐专区 到最后 */
+
+/* 特别推荐 */
+.recommend-image {
+   width: 100%;
+   height: 25vh;
+}
+
+/* 分类列表 整体 */
+.categoryList {
+   margin-top: 4vh;
+   margin-left: 3vw;
+}
+
+/* 分类 标题 */
+.categoryList-title {
+   font-size: 22px;
+   /* margin-bottom: 2vh; */
+}
+
+/* 一个分类块整体 */
+.whole {
+   width: 98vw;
+   height: 57vh;
+   float: left;
+}
+
+/* 分类图片 外框 */
+.categoryList .picture {
+   background-color: #FFFFFF;
+   height: 73vw;
+   width: 25vw;
+   margin-top: 2vh;
+   float: left;
+   text-align: center;
+}
+
+/* 分类图片 */
+.categoryList .picture image {
+   margin-top: 3vh;
+   width: 90%;
+
+}
+
+/* 推荐商品 开始 */
+
+/* 推荐商品 整体 */
+.recommend {
+   float: left;
+   width: 31.5vw;
+   height: 35vw;
+   margin-left: 3vw;
+   margin-top: 2vh;
+   text-align: center;
+   background-color: #FFFFFF;
+}
+
+/* 推荐商品 图片 */
+.recommend image {
+   width: 22vw;
+   height: 18vw;
+   margin-top: 2vh;
+}
+
+/* 推荐商品 名称 */
+.recommend .name {
+   font-size: 14px;
+   margin-top: 0.5vh;
+}
+
+/* 推荐商品 价格 */
+.recommend .price {
+   font-size: 13px;
+   color: #ff6700;
+   margin-top: 0.5vh;
+}
+
+/* 推荐商品 结束 */
+
+
+
+
+
+
+
+

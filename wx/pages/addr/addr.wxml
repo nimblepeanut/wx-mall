@@ -1,0 +1,62 @@
+<!-- 添加收货地址 开始 -->
+
+<view class="add">
+
+   <navigator url="/pages/addrAdd/addrAdd">+ 添加收货地址</navigator>
+
+</view>
+
+<view class="clear"></view>
+
+<!-- 添加收货地址 结束 -->
+
+<!-- 输入框 开始 -->
+
+<view class="search_row">
+
+   <input value="{{inpValue}}" placeholder="请输入您要查找的收获地址" bindinput="handleInput"> </input>
+
+   <button bindtap="handleCancel" hidden="{{!isFocus}}">取消</button>
+
+</view>
+
+<!-- 输入框 结束 -->
+
+<!-- 地址列表 开始 -->
+
+<view class="search_content">
+
+   <view class="search_item" wx:for="{{addrList}}" wx:key="id">
+
+      <navigator  bindtap="addCart"  data-addrId="{{item.id}}" hover-class="none" >
+
+      <!-- <navigator  open-type='switchTab' url="/pages/cart/cart?addrId={{item.id}}&goodsId={{goodsId}}&userId={{userId}}" hover-class="none"> -->
+
+         <!-- <image src="/icons/地址.png"></image> -->
+
+         <!-- 文字-整体 开始 -->
+         <view class="whole">
+
+            <!-- 收货人 -->
+            <view class="consignee">{{item.consignee}}</view>
+
+            <!-- 手机号码 -->
+            <view class="phone">{{item.phone}}</view>
+
+            <!-- 详细地址 -->
+            <view class="name">{{item.name}}</view>
+
+            <!-- 所在地区 -->
+            <view class="address">{{item.address}}</view>
+
+         </view>
+         <!-- 文字-整体 结束 -->
+
+      </navigator>
+
+   </view>
+
+</view>
+
+
+<!-- 地址列表 结束 -->

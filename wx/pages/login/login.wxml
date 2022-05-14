@@ -1,0 +1,52 @@
+<!-- 背景图片 开始 -->
+
+<view>
+
+   <image mode="aspectFill" class="background" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01a28d55cb4b3832f8755e66d8bd59.jpg&refer=http%3A%2F%2Fimg.zcool.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1654484938&t=4ccff134bc07a68cbf316171e26f7206">
+   </image>
+
+</view>
+
+<!-- 背景图片 结束 -->
+
+<!-- 登录 开始 -->
+
+<!-- bindsubmit：携带 form 中的数据触发 submit 事件 login-->
+<form bindsubmit="login">
+
+   <view class="title">
+      欢迎光临繁星商城
+   </view>
+
+   <!-- 账号 开始 -->
+   <view class="whole">
+
+      <label for="username">账号：</label>
+
+      <input type="text" name="username" id="username" class="" placeholder="请输入账号" />
+
+   </view>
+   <!-- 账号 结束 -->
+
+   <!-- 密码 开始 -->
+   <view class="whole">
+
+      <label for="password">密码：</label>
+
+      <input type="password" name="password" id="password" placeholder="请输入密码" />
+
+   </view>
+   <!-- 密码 结束 -->
+
+   <button type="primary" formType="submit">登录</button>
+
+   <button formType="reset">重置</button>
+
+   <!-- 注册 -->
+   <navigator url="/pages/register/register" hover-class="none">👉快速注册</navigator>
+
+</form>
+
+<!-- 登录 结束 -->
+
+

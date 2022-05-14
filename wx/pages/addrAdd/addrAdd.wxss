@@ -1,0 +1,103 @@
+/* 表单 开始 */
+
+/* 标题 */
+.title {
+   text-align: center;
+   font-size: 26px;
+   margin-top: 2vh;
+   margin-bottom: 8vh;
+}
+
+/* 输入栏 开始 */
+/* 整体 */
+.whole {
+   margin-top: 2vh;
+   width: 90vw;
+   float: left;
+   margin-left: 6vw;
+   margin-bottom: 3vh;
+}
+
+/* 前面的label */
+label {
+   float: left;
+   width: 25vw;
+   font-weight: 600;
+   font-size: 18px;
+   padding-top: 2.2vh;
+}
+
+/* 输入框 */
+input {
+   letter-spacing: 1px;
+   width: 60vw;
+   height: 8vh;
+   padding-left: 2vw;
+
+   font-size: 16px;
+   border: solid 0px;
+   border-radius: 10px;
+   background-color: #F5F5F5;
+}
+
+/* 输入栏 结束 */
+
+/* 选择收货地址 开始 */
+
+/* 整体 */
+.location {
+   float: left;
+   width: 40vw;
+   height: 5vh;
+   letter-spacing: 1px;
+   margin-left: 54vw;
+   margin-bottom: 4vh;
+
+   /* background-color: #28AFEA; */
+}
+
+/* 标题 */
+.location-title {
+   float: left;
+   font-size: 18px;
+   color: #8C8C8C;
+}
+
+/* 图片 */
+.location image {
+   width: 6.5vw;
+   height: 7vw;
+}
+
+/* 选择收货地址 结束 */
+
+/* 按钮 */
+button {
+   height: 6vh;
+   width: 80vw;
+   border-radius: 25px;
+
+   /* 垂直 */
+   line-height: 5vh;
+   /* 字体间距 */
+   letter-spacing: 3px;
+
+   margin-bottom: 3vh;
+
+   padding-top: 1.5vh;
+   padding-bottom: 6vh;
+}
+
+/* 提交 */
+.submit {
+   color: #FFFFFF;
+   background-color: #FF6B01;
+}
+
+.reset {
+   width: 80vw;
+   color: #797979;
+}
+
+
+/* 表单 结束 */

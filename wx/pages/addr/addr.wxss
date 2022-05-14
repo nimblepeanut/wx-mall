@@ -1,0 +1,137 @@
+page {
+   background-color: #dedede;
+   padding: 20rpx;
+}
+
+.search_row {
+   width: 95vw;
+   height: 60rpx;
+   display: flex;
+   /* margin-top: 9.5vh; */
+}
+
+.search_row input {
+   background-color: #fff;
+   flex: 1;
+   height: 100%;
+   padding-left: 30rpx;
+}
+
+.search_row button {
+   width: 110rpx;
+   height: 100%;
+   padding: 0;
+   margin: 0 10rpx;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 26rpx;
+}
+
+.search_content {
+   width: 95vw;
+   margin-top: 30rpx;
+}
+
+/* 地址列表 开始 */
+
+.search_content .search_item {
+   background-color: #fff;
+   font-size: 26rpx;
+   padding: 15rpx 10rpx;
+   border-bottom: 1rpx solid #ccc;
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+   margin-bottom: 1vh;
+}
+
+/* 图片 */
+/* image {
+   float: left;
+   width: 10vw;
+   height: 10vw;
+   padding-top: 3vh;
+   margin-left: 2vw;
+} */
+
+/* 整体 */
+.whole {
+   float: left;
+   margin-left: 3vw;
+}
+
+/* 收货人 */
+.consignee {
+   height: 3vh;
+   font-size: 21px;
+   font-weight: 600;
+   float: left;
+   padding-right: 4vw;
+}
+
+/* 手机号码 */
+.phone {
+   font-size: 14px;
+   color: #A3A3A3;
+   padding-top: 1vh;
+}
+
+/* 详细地址 */
+.name {
+   font-size: 16px;
+   padding-top: 1.5vh;
+}
+
+/* 所在地区 */
+.address {
+   font-size: 15px;
+   padding-top: 1vh;
+}
+
+
+/* 地址列表 结束 */
+
+/* 添加收货地址 开始 */
+
+/* 整体 */
+.add {
+
+   position: fixed;
+   /* left: 0; */
+   bottom: 0;
+   width: 100%;
+   background-color: #fff;
+   display: flex;
+
+   width: 100vw;
+   margin-left: -20rpx;
+   height: 8vh;
+   padding-top: 2vh;
+   padding-left: 2%;
+
+   font-size: 18px;
+   /* 字间距 */
+   letter-spacing: 3px;
+   color: #ffffff;
+   background-color: #ffffff;
+   text-align: center;
+
+   /* 绝对定位 */
+   /* position: absolute;
+   top: 0; */
+
+}
+
+/* 按钮 */
+.add navigator {
+   width: 96%;
+   height: 5.2vh;
+   padding-top: 1vh;
+   border-radius: 20px;
+   background-color: #FF5703;
+}
+
+
+
+/* 添加收货地址 结束 */

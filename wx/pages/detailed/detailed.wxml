@@ -1,0 +1,121 @@
+<!-- 商品-轮播图 开始 -->
+
+<view class="recommendList">
+
+   <!-- 轮播图的参数 -->
+   <swiper autoplay indicator-dots indicator-active-color="#087CFA" circular interval="2000">
+
+      <!-- 循环部分 开始 -->
+      <!-- 点击事件 handlePrevewImage ，放大预览图片 -->
+      <!-- 传递当前的图片 data-url="{{item.picture}}" -->
+      <swiper-item 
+      bindtap="handlePrevewImage" 
+      data-url="{{item.picture}}" 
+      wx:for="{{goods.goodsPicture}}" wx:key="id">
+
+         <!-- 跳转 开始 -->
+         <!-- <navigator hover-class="none"> -->
+
+            <!-- 图片 -->
+            <image mode="aspectFit" src="{{item.picture}}">
+            </image>
+
+         <!-- </navigator> -->
+         <!-- 跳转 结束 -->
+
+      </swiper-item>
+      <!-- 循环部分 结束 -->
+
+   </swiper>
+
+</view>
+
+<!-- 商品-轮播图 结束 -->
+
+<view class="goods_price">
+
+   <!-- 价格 -->
+   <view class="goods_price_discount">专属优惠</view> ￥{{goods.price}}
+
+   <!-- 库存 -->
+   <view class="count" wx:if="{{goods.count>0}}">库存{{goods.count}}件</view>
+   <view class="count" wx:if="{{goods.count<=0}}">缺货</view>
+
+</view>
+
+<view class="goods_name_row">
+
+   <!-- 名称 -->
+   <view class="goods_name">{{goods.name}}</view>
+
+   <!-- 收藏后改变颜色 开始 -->
+   <view class="goods_collect" bindtap="handleCollect">
+
+      <view class="collect_text {{isCollect?'noCollection1':'noCollection2'}}">收藏</view>
+      <view class="collect_text {{isCollect?'collection1':'collection2'}}">已收藏</view>
+
+   </view>
+   <!-- 收藏后改变颜色 结束 -->
+
+</view>
+
+<view class="goods_info">
+   <view class="goods_info_title">商品详情</view>
+   <view class="goods_info_content">
+      {{goods.introduce}}
+   </view>
+</view>
+
+<!-- 图片 开始 -->
+
+<view>
+
+   <image wx:for="{{goods.goodsPicture}}" wx:key="id" mode="aspectFit" src="{{item.picture}}"></image>
+
+</view>
+
+<!-- 图片 结束 -->
+
+<view class="btm_tool">
+
+   <view class="tool_item">
+
+      <view class="iconfont icon-kefu"></view>
+
+      <view>客服</view>
+
+      <button open-type="contact"></button>
+
+   </view>
+
+   <view class="tool_item">
+
+      <view class="iconfont icon-yixianshi-"></view>
+
+      <view>分享</view>
+
+      <button open-type="share"></button>
+
+   </view>
+
+   <navigator open-type="switchTab" url="/pages/cart/cart" class="tool_item">
+
+      <view class="iconfont icon-gouwuche"></view>
+
+      <view>购物车</view>
+
+   </navigator>
+
+   <!-- <view class="tool_item btn_cart " bindtap="handleCartAdd"> -->
+      <navigator url="/pages/addr/addr?goodsId={{goods.id}}"  class="tool_item btn_cart " >
+      加入购物车
+      </navigator>
+   <!-- </view> -->
+
+   <view class="tool_item btn_buy">
+
+      立即购买
+
+   </view>
+
+</view>

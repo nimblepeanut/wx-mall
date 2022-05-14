@@ -1,0 +1,111 @@
+<!-- 自定义组件-搜索 开始 -->
+
+<search></search>
+
+<!-- 自定义组件-搜索 结束 -->
+
+<!-- 推荐-轮播图 开始 -->
+<!-- 显示推荐的商品，recommend=1 -->
+
+<view class="recommendList">
+
+   <!-- 轮播图的参数 -->
+   <swiper autoplay indicator-dots indicator-active-color="#087CFA" circular interval="2000">
+
+      <!-- 因为推荐的商品会比较多，所以只展示5条，
+               注意：从0开始算 -->
+      <swiper-item wx:for="{{recommendList}}" wx:key="id" wx:if="{{index<5}}">
+
+         <!-- 跳转 开始 -->
+         <!-- <navigator> -->
+         <navigator url="/pages/detailed/detailed?goodsId={{item.id}}" hover-class="none">
+
+            <image mode="aspectFit" src="{{item.goodsPicture[0].picture}}">
+            </image>
+
+         </navigator>
+         <!-- 跳转 结束 -->
+
+      </swiper-item>
+
+   </swiper>
+
+</view>
+
+<!-- 推荐-轮播图 结束 -->
+
+<!-- 分类导航 开始 -->
+
+<view class="navigation">
+
+   <navigator hover-class="none" wx:for="{{List}}" url="{{item.image_url}}" wx:key="name">
+
+      <image src="{{item.image_src}}">
+      </image>
+
+      <view class="name">
+         {{item.name}}
+      </view>
+
+   </navigator>
+
+</view>
+
+<!-- 分类导航 结束 -->
+
+<!-- 推荐专区 到最后 -->
+
+<image class="recommend-image" src="https://pic.imgdb.cn/item/6277a9ef0947543129b9b53d.png"></image>
+
+<!-- 分类 开始 -->
+
+<view class="categoryList" wx:for="{{categoryList}}" wx:key="id">
+
+   <!-- 标题 -->
+   <view class="categoryList-title">{{item.name}}</view>
+
+   <view class="whole">
+
+      <!-- 分类图片 开始 -->
+      <view class="picture">
+
+         <image mode="aspectFit" src="{{item.picture}}"></image>
+
+      </view>
+      <!-- 分类图片 结束 -->
+
+      <!-- 推荐商品 开始 -->
+
+      <!-- 最多只显示4条 -->
+      <view class="recommend" wx:for="{{item.goods}}" wx:for-item="goods" wx:for-index="goodsIndex" wx:if="{{goodsIndex<4}}">
+
+         <!-- 跳转到商品详情页 -->
+         <navigator class="" url="/pages/detailed/detailed?goodsId={{goods.id}}" hover-class="none">
+
+            <!-- 商品 图片 -->
+            <image src="{{goods.goodsPicture[0].picture}}"></image>
+
+            <!-- 商品 名 -->
+            <view class="name">{{goods.name}}</view>
+
+            <!-- 商品 价格 -->
+            <view class="price">{{goods.price}}元</view>
+
+         </navigator>
+
+      </view>
+
+   </view>
+
+   <!-- 推荐商品 结束 -->
+
+</view>
+
+<!-- 分类 结束 -->
+
+
+
+
+
+<!--  开始 -->
+<!--  结束 -->

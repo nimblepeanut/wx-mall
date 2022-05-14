@@ -1,0 +1,42 @@
+/* 搜索 开始 */
+
+/* 整体 */
+.search {
+   height: 70rpx;
+   padding: 10rpx; 
+   background-color: #fff;
+   /* background-color: var(--themeColor); */
+   font-size: 16px;
+}
+
+.search navigator {
+   border: solid 2px #FF5703;
+}
+
+/* 跳转 */
+.search navigator {
+   display: flex;
+   height: 100%;
+   align-items: center;
+   justify-content: center;
+   background-color: #fff;
+   border-radius: 30rpx;
+   text-align: center;
+}
+
+/* 搜索图标 */
+.search-image {
+   background-color: #FF5703;
+   height: 60rpx;
+   width: 80rpx;
+   border-radius: 30rpx;
+   margin-left: 67vw;
+}
+
+.search-image image {
+   height: 45rpx;
+   width: 45rpx;
+   margin-top: 0.8vh;
+}
+
+/* 搜索 结束 */

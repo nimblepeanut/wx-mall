@@ -1,0 +1,146 @@
+<!-- 用户图片 开始 -->
+
+<view class="user_info_wrap">
+
+   <view class="user_img_wrap">
+
+      <image class="user_bg" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fnimg.ws.126.net%2F%3Furl%3Dhttp%253A%252F%252Fdingyue.ws.126.net%252F2021%252F0930%252F9787c3ffj00r080jp0016c000m800m8c.jpg%26thumbnail%3D650x2147483647%26quality%3D80%26type%3Djpg&refer=http%3A%2F%2Fnimg.ws.126.net&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1654777604&t=230fa1c7abbf73e03efc3d8655a45c18"></image>
+
+      <view class="user_info">
+
+         <!-- 用户头像 -->
+         <image class="user_icon" src="{{headPortrait}}"></image>
+
+         <!-- 用户名 -->
+         <view class="user_name">{{username}}</view>
+
+         <!-- 用户名 -->
+         <view class="user_money">余额：{{money}}元</view>
+
+      </view>
+
+   </view>
+
+</view>
+
+<!-- 用户图片 结束 -->
+
+<view class="user_content">
+
+   <view class="user_main">
+
+      <!-- 用户信息 开始 -->
+
+      <view class="history_wrap">
+
+         <!-- 退出登录 开始 -->
+
+         <navigator url="/pages/login/login">
+
+            <view class="his_num">
+
+               <image src="/icons/退出登录.png"></image>
+
+            </view>
+
+            <view class="his_name">退出登录</view>
+
+         </navigator>
+
+         <!-- 退出登录 结束 -->
+
+         <!-- 余额充值 开始 -->
+
+         <navigator url="/pages/recharge/recharge">
+
+            <view class="his_num">
+
+               <image src="/icons/充值.png"></image>
+
+            </view>
+
+            <view class="his_name">余额充值</view>
+
+         </navigator>
+
+         <!-- 余额充值 结束 -->
+
+         <!-- 修改密码 开始 -->
+
+         <navigator>
+
+            <view class="his_num">
+
+               <image src="/icons/修改密码.png"></image>
+
+            </view>
+
+            <view class="his_name">修改密码</view>
+
+         </navigator>
+
+         <!-- 修改密码 结束 -->
+
+      </view>
+
+      <!-- 用户信息 结束 -->
+
+      <!-- 我的订单 -->
+      <view class="orders_wrap">
+
+         <view class="orders_title">我的订单</view>
+
+         <view class="order_content">
+
+            <navigator url="/pages/order/index?type=1">
+               <view class="iconfont icon-ding_dan"></view>
+               <view class="order_name">全部订单</view>
+            </navigator>
+
+            <navigator url="/pages/order/index?type=2">
+               <view class="iconfont icon-fukuantongzhi"></view>
+               <view class="order_name">待付款</view>
+            </navigator>
+
+            <navigator url="/pages/order/index?type=3">
+               <view class="iconfont icon-receipt-address"></view>
+               <view class="order_name">待收货</view>
+            </navigator>
+
+            <navigator>
+               <view class="iconfont icon-tuihuotuikuan_dianpu"></view>
+               <view class="order_name">退款/退货</view>
+            </navigator>
+
+         </view>
+      </view>
+
+      <!-- 收货地址管理 -->
+      <navigator url="/pages/addr/addr" class="address_wrap">
+         收货地址管理
+      </navigator>
+
+      <!-- 应用信息 -->
+      <view class="app_info_wrap">
+
+         <view class="app_info_item app_info_contact">
+
+            <text>联系客服</text>
+            <text>012-345-6789</text>
+
+         </view>
+
+         <!-- <view>客服</view>
+ 
+         <!-- <navigator url="/pages/feedback/index" class="app_info_item">意见反馈</navigator> -->
+
+         <view class="app_info_item">关于我们</view>
+
+      </view>
+
+      <!-- 按钮 -->
+      <button class="recommend_wrap" open-type="contact">意见反馈</button>
+      <button class="recommend_wrap" open-type="share">分享本应用</button>
+
+   </view>
+</view>

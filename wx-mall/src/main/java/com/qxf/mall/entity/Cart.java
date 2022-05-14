@@ -38,12 +38,6 @@ public class Cart {
 	// 0：未支付
 	// 1：支付
 	private Integer state;
-
-	@Override
-	public String toString() {
-		return "Cart [id=" + id + ", user=" + user + ", userId=" + userId + ", goods=" + goods + ", goodsId=" + goodsId
-				+ ", addr=" + addr + ", addrId=" + addrId + ", count=" + count + ", state=" + state + "]";
-	}
 	
 	
 	

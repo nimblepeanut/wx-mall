@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.github.pagehelper.PageInfo;
 import com.qxf.mall.entity.Category;
 import com.qxf.mall.entity.Result;
 import com.qxf.mall.service.CategoryService;
@@ -42,7 +41,7 @@ public class CategoryController {
 	@GetMapping
 	public Result get(Integer page, Integer limit, String name) {
 		
-		PageInfo list = categoryService.selectName(page, limit, name);
+		List<Category> list = categoryService.selectName(page, limit, name);
 		
 		// 判断是否查询成功
 		if (list == null) {

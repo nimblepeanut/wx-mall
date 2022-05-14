@@ -29,14 +29,6 @@ public interface UserService {
 	 * @return
 	 */
 	User recharge(Integer userId, BigDecimal money);
-
-	/**
-	 * 	根据用户id查，
-	 * 	清空购物车后的重查用户信息
-	 * @param id
-	 * @return
-	 */
-	User seleById(Integer id);
 	
 	
 	

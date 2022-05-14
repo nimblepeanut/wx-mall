@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.github.pagehelper.PageInfo;
 import com.qxf.mall.entity.Goods;
 import com.qxf.mall.entity.Result;
 import com.qxf.mall.service.GoodsService;
@@ -38,7 +37,7 @@ public class GoodsController {
 	@GetMapping
 	public Result get(Integer page, Integer limit, Integer categoryId, String name) {
 		
-		PageInfo list = goodsService.select(page, limit, categoryId, name);
+		List<Goods> list = goodsService.select(page, limit, categoryId, name);
 		
 		// 判断是否查询成功
 		if (list == null) {
