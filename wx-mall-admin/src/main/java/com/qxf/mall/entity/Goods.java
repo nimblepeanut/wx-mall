@@ -26,7 +26,7 @@ public class Goods {
 	// 价格
 	private BigDecimal price;
 	
-	// 数量
+	// 库存
 	private Integer count;
 	
 	// 图片类

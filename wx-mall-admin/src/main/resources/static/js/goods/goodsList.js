@@ -4,6 +4,9 @@ layui.use(['table', 'layer', 'form', 'upload', 'element'], function(){
 	
 	var table = layui.table,
 	form = layui.form,
+	upload = layui.upload, 
+	element = layui.element,
+	layer = layui.layer,
 	$ = layui.$;
 	
 	// 分类下拉框 开始
@@ -19,14 +22,14 @@ layui.use(['table', 'layer', 'form', 'upload', 'element'], function(){
 		$.ajax({
 			
 			url: '/api/category', 
-			data: {categoryId: 0},
+//			data: {categoryId: 0},
 			type: 'get',
 			dataType: 'json',
 			success: function(data) {
 				
 				var html = '<option value="">请选择分类</option>';
 				
-				$.each(data.data, function(index, item) {
+				$.each(data.data.list, function(index, item) {
 					
 					if (item.id == cur) {
 						html += '<option value="'+item.id+'" selected>'+item.name+'</option>';
@@ -81,6 +84,20 @@ layui.use(['table', 'layer', 'form', 'upload', 'element'], function(){
 			{field:'state', width:70 , title:'状态', templet: function(d){ return ['下架', '上架'][d.state]; } },																							
 			{title:'操作', width:290, toolbar:'#operation'}
 		]],
+		
+		// 别忘了加这个
+		// 否则会报 LAY_TABLE_INDEX：Layui数据表格数据加载异常
+		parseData: function(d){
+			
+//			 console.log(d.data.list);
+			
+			return {
+				code: d.code,
+				msg: d.msg,
+				count: d.data.total,
+				data: d.data.list,
+			};
+		}
 		
 	});
 

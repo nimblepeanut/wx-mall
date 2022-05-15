@@ -28,7 +28,7 @@ form {
 	width: 500px;
 	
 	margin-top: 30px;
-	margin-left: -10px;
+	margin-left: 50px;
 }
 
 /* 整体的输入部分 */
@@ -43,6 +43,10 @@ form {
 
 /* 输入框 */
 .layui-input {
+	width: 300px;
+}
+
+.layui-textarea {
 	width: 300px;
 }
 

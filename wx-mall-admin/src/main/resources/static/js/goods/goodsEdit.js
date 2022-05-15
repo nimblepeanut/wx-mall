@@ -40,7 +40,7 @@ function loadCategory(cur) {
 			
 			var html = '<option value="">请选择分类</option>';
 			
-			$.each(data.data, function(index, item) {
+			$.each(data.data.list, function(index, item) {
 				
 				if (item.id == cur) {
 					html += '<option value="'+item.id+'" selected>'+item.name+'</option>';
@@ -66,58 +66,25 @@ function loadCategory(cur) {
 
 // 分类下拉框 结束
 
+// 名称
 $("input[name='name']").val(goodsEdit.name);
+// 价格
 $("input[name='price']").val(goodsEdit.price);
+// 库存
 $("input[name='count']").val(goodsEdit.count);
-
-//图片 开始
-
-//console.log(goodsEdit.goodsPicture[0].picture);
-
-// 图片+遮罩层
-// 设成行内块元素: <div style="position:relative; display:inline-block;">
-// 遮罩层: 向上移动0像素就显示出来了top:0px
-/*
-$.each(goodsEdit.goodsPicture, function(index, item){
-
-	$('#pic-list').append('<div class="img-box" style="position:relative; display:inline-block; cursor:pointer;">'+
-		'<img style="height:92px; width:92px;" src="'+item.picture+'" data-url="'+item.picture+'">'+
-		'<div class="div-del" style="position:absolute; background-color:#55555588; display:none;'+
-		'width:92px; height:92px; top:0px; text-align:center; color:#FFF; line-height:92px">点击删除</div></div>');
-	
-});
-
-// 鼠标移到图片上
-$("#pic-list").on('mouseover', '.img-box', function(){
-	$(this).find('.div-del').show().fadeIn(300);
-});
-
-// 鼠标移出图片
-$("#pic-list").on('mouseout', '.img-box', function(){
-	$(this).find('.div-del').stop().fadeOut(300);
-});
-
-// 鼠标点击图片
-$("#pic-list").on('click', '.div-del', function(){
-	$(this).parents('.img-box').remove();
-});
-
-// 图片 结束
-
+// 介绍
 $("textarea[name='introduce']").val(goodsEdit.introduce);
-
+// 推荐
 $("input[name='recommend']").attr('checked', goodsEdit.recommend==1);
-
+// 状态
 $("input[name='state']").attr('checked', goodsEdit.state==1);
-*/
-
-// 在右侧显示图片
-//document.getElementById("img").src=goodsEdit.picture;
 
 // 删除会话里保存的数据
 sessionStorage.removeItem('goodsEdit');
 
 form.on('submit(goodsEdit)', function(data) {
+	
+	console.log(data);
 	
 	// ajax异步请求
 	$.ajax({
@@ -175,9 +142,49 @@ form.on('submit(goodsEdit)', function(data) {
 
 
 
+//$("input[name='recommend']").attr('checked', goodsEdit.recommend==1);
+//$("input[name='recommend'][value='"+goodsEdit.recommend+"']").attr("checked", true);
 
+//$("input[name='state']").attr('checked', goodsEdit.state==1);
+//$("input[name='state'][value='"+goodsEdit.state+"']").attr("checked", true);
 
+//图片 开始
 
+//console.log(goodsEdit.goodsPicture[0].picture);
+
+//图片+遮罩层
+//设成行内块元素: <div style="position:relative; display:inline-block;">
+//遮罩层: 向上移动0像素就显示出来了top:0px
+/*
+$.each(goodsEdit.goodsPicture, function(index, item){
+
+	$('#pic-list').append('<div class="img-box" style="position:relative; display:inline-block; cursor:pointer;">'+
+		'<img style="height:92px; width:92px;" src="'+item.picture+'" data-url="'+item.picture+'">'+
+		'<div class="div-del" style="position:absolute; background-color:#55555588; display:none;'+
+		'width:92px; height:92px; top:0px; text-align:center; color:#FFF; line-height:92px">点击删除</div></div>');
+	
+});
+
+//鼠标移到图片上
+$("#pic-list").on('mouseover', '.img-box', function(){
+	$(this).find('.div-del').show().fadeIn(300);
+});
+
+//鼠标移出图片
+$("#pic-list").on('mouseout', '.img-box', function(){
+	$(this).find('.div-del').stop().fadeOut(300);
+});
+
+//鼠标点击图片
+$("#pic-list").on('click', '.div-del', function(){
+	$(this).parents('.img-box').remove();
+});
+
+//在右侧显示图片
+//document.getElementById("img").src=goodsEdit.picture;
+
+//图片 结束
+*/
 
 
 

@@ -64,6 +64,21 @@ public interface UserMapper {
 		@Result(column = "head_portrait", property = "headPortrait")
 	})
 	User selectById(Integer userId);
+
+	/**
+	 * 	付款，
+	 * 	根据用户id查
+	 * @param userId
+	 * @param totalPrice
+	 * @return
+	 */
+	@Update({
+		"update user ",
+		"set ",
+		"money = money - #{totalPrice} ",
+		"where id = #{userId}"
+	})
+	Integer updateMoney(@Param("userId") Integer userId, @Param("totalPrice")  BigDecimal totalPrice);
 	
 	
 	

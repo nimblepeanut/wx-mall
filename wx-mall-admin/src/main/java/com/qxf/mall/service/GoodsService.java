@@ -2,6 +2,7 @@ package com.qxf.mall.service;
 
 import java.util.List;
 
+import com.github.pagehelper.PageInfo;
 import com.qxf.mall.entity.Goods;
 
 /**
@@ -18,7 +19,7 @@ public interface GoodsService {
 	 * @param name
 	 * @return
 	 */
-	List<Goods> select(Integer page, Integer limit, Integer categoryId, String name);
+	PageInfo select(Integer page, Integer limit, Integer categoryId, String name);
 	
 	/**
 	 * 添加

@@ -15,7 +15,7 @@ spring:
     password: 'root'
 
 ## 打印sql日志
-#mybatis:
-#   configuration:
-#      log-impl: org.apache.ibatis.logging.stdout.StdOutImpl    
+mybatis:
+   configuration:
+      log-impl: org.apache.ibatis.logging.stdout.StdOutImpl    
     

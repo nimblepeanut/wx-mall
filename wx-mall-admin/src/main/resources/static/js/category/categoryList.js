@@ -32,6 +32,20 @@ layui.use(['table', 'layer', 'form', 'upload', 'element'], function(){
 			{field : 'picture',title : '分类图片',templet:'#pic'}, 
 			{title : '操作',toolbar : '#operation'} 
 		]],
+		
+		// 别忘了加这个
+		// 否则会报 LAY_TABLE_INDEX：Layui数据表格数据加载异常
+		parseData: function(d){
+			
+//			 console.log(d.data.list);
+			
+			return {
+				code: d.code,
+				msg: d.msg,
+				count: d.data.total,
+				data: d.data.list,
+			};
+		}
 
 	});
 

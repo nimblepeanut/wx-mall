@@ -36,7 +36,7 @@ layui.use(['table', 'layer', 'form', 'upload', 'element'], function(){
 				
 				var html = '<option value="">请选择分类</option>';
 				
-				$.each(data.data, function(index, item) {
+				$.each(data.data.list, function(index, item) {
 					
 					if (item.id == cur) {
 						html += '<option value="'+item.id+'" selected>'+item.name+'</option>';

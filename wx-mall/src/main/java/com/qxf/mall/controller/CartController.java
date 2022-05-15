@@ -1,18 +1,22 @@
 package com.qxf.mall.controller;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.qxf.mall.entity.Addr;
 import com.qxf.mall.entity.Cart;
 import com.qxf.mall.entity.Goods;
 import com.qxf.mall.entity.Result;
+import com.qxf.mall.entity.User;
 import com.qxf.mall.service.CartService;
 
 /**
@@ -29,6 +33,11 @@ public class CartController {
 	
 	/**
 	 * 	加入购物车
+	 * 
+	 * 	查询商品是否重复，
+	 * 	根据用户id、商品id查
+	 * 
+	 * 	重复的话添加购物车里的商品数量
 	 * @param cart
 	 * @return
 	 */
@@ -66,6 +75,26 @@ public class CartController {
 
 	}
 	
+	/**
+	 * 	付款，
+	 * 	根据用户id
+	 * @param userId
+	 * @return
+	 */
+	@PutMapping
+	public Result payment(Integer userId) {
+		
+		// 业务层
+		Integer payment = cartService.payment(userId);
+
+		// 结果
+		if (payment > 0) {
+			return Result.success(payment);
+		} else {
+			return Result.error("付款失败！");
+		}
+
+	}
 	
 	
 	

@@ -28,7 +28,6 @@ public class VerCodeUtil {
 	private static final String CODES = "1234567890ABCDEFGHJKLMNPQRSTUVWXYZ";
 	private static final int LINE_COUNT = 15;
 	
-	
 	/**
 	 * 
 	 * @param response 

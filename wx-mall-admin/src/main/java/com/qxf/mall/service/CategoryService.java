@@ -2,6 +2,7 @@ package com.qxf.mall.service;
 
 import java.util.List;
 
+import com.github.pagehelper.PageInfo;
 import com.qxf.mall.entity.Category;
 
 /**
@@ -18,7 +19,7 @@ public interface CategoryService {
 	 * @param name
 	 * @return
 	 */
-	List<Category> selectName(Integer page, Integer limit, String name);
+	PageInfo selectName(Integer page, Integer limit, String name);
 	
 	/**
 	 * 	根据id删除商品分类

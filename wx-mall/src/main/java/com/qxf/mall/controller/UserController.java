@@ -39,16 +39,12 @@ public class UserController {
 	public Result login(String username, String password) {
 
 		try {
-
 			// 验证登录信息
 			User loginUser = userService.login(username, password);
 			return Result.success(loginUser);
-
 		} catch (Exception e) {
-
 			e.printStackTrace();
 			return Result.error(e.getMessage());
-
 		}
 
 	}
@@ -101,7 +97,26 @@ public class UserController {
 
 	}
 	
-	
+	/**
+	 * 	根据用户id查，
+	 * 	清空购物车后的重查用户信息
+	 * @param username
+	 * @param password
+	 * @return
+	 */
+	@GetMapping("/seleById")
+	public Result seleById(Integer id) {
+
+		try {
+			// 验证登录信息
+			User user = userService.seleById(id);
+			return Result.success(id);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return Result.error(e.getMessage());
+		}
+
+	}
 	
 	
 	

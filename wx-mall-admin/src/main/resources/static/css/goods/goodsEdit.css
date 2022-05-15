@@ -26,7 +26,11 @@ form {
 
 /* 输入框 */
 .layui-input {
-	width: 250px;
+	width: 400px;
+}
+
+.layui-textarea {
+	width: 400px;
 }
 
 button {

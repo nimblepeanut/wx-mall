@@ -5,6 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.qxf.mall.entity.Category;
 import com.qxf.mall.mapper.CategoryMapper;
 import com.qxf.mall.service.CategoryService;
@@ -25,21 +27,25 @@ public class CategoryServiceImpl implements CategoryService {
 	 * 通用查询
 	 */
 	@Override
-	public List<Category> selectName(Integer page, Integer limit, String name) {
+	public PageInfo selectName(Integer page, Integer limit, String name) {
 		
-		// 分页为空代表是商品下拉框，无条件全查就行
 		if (page == null) {
-			return categoryMapper.selectAll();
+			page = 1;
 		}
 		
-		// 起点
-		Integer start = (page - 1) * limit;
+		if (limit == null) {
+			limit = 10;
+		}
 		
-		return categoryMapper.selectName(start, limit, name);
+		// 开启分页
+		PageHelper.startPage(page, limit);
+		List list = categoryMapper.selectName(name);
+		PageInfo pageInfo = new PageInfo<>(list);
+		
+		return pageInfo;
 		
 	}
 	
-
 	/**
 	 * 	根据id删除商品分类
 	 */

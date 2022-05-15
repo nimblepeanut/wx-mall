@@ -33,7 +33,6 @@ layui.use(['table', 'layer', 'form', 'upload', 'element'], function(){
 			{title : '操作',toolbar : '#operation', width:200},
 		]],
 		
-		
 		// 别忘了加这个
 		// 否则会报 LAY_TABLE_INDEX：Layui数据表格数据加载异常
 		parseData: function(d){
