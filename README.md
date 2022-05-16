@@ -4,7 +4,7 @@
 前台为微信小程序
 # 后台管理系统
 ## 1. 登录
-![请添加图片描述](https://img-blog.csdnimg.cn/befa69916d0a4f42bd9f6efbb1be790c.png)
+![请添加图片描述](https://img-blog.csdnimg.cn/746786c90b5943f0b23e2c3d98fc300b.png)
 ## 2. 主页
 ![请添加图片描述](https://img-blog.csdnimg.cn/70699bcd3f5c4fb0b094b45ce51b1b4e.png)
 ## 3. 管理员账号
