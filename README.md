@@ -34,7 +34,7 @@
 ![请添加图片描述](https://img-blog.csdnimg.cn/bfc09258907548029f2b8ff86a7a741c.png)
 # 前台微信小程序
 ## 1. 登录
-![请添加图片描述](https://img-blog.csdnimg.cn/83fc888b211c47baa2146802cbef931e.png)
+![请添加图片描述](https://pic.imgdb.cn/item/6281ac9509475431298bc665.png)
 ## 2. 注册
 ![请添加图片描述](https://pic.imgdb.cn/item/6281ac9609475431298bc671.png)
 ## 3. 首页
