@@ -74,7 +74,7 @@ Page({
       // 网络请求 开始
       wx.request({
 
-         url: 'http://localhost:5000/addr',
+         url: 'http://www.qxf.world/addr',
 
          method: "POST",
 

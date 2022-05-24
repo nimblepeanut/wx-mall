@@ -101,7 +101,7 @@ Page({
       // 网络请求 开始
       wx.request({
 
-         url: 'http://localhost:5000/cart',
+         url: 'http://www.qxf.world/cart',
 
          method: "GET",
 
@@ -205,7 +205,7 @@ Page({
             // 图表
             icon: 'error',
             // 标题
-            title: '不能少于1',
+            title: '不能少于1件',
          })
          // 弹窗 结束
 
@@ -246,7 +246,7 @@ Page({
       // 网络请求 开始
       wx.request({
 
-         url: 'http://localhost:5000/cart',
+         url: 'http://www.qxf.world/cart',
 
          method: "PUT",
 
@@ -336,7 +336,7 @@ Page({
       // 网络请求
       wx.request({
 
-         url: 'http://localhost:5000/user/seleById',
+         url: 'http://www.qxf.world/user/seleById',
 
          method: "GET",
 

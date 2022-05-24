@@ -13,7 +13,12 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <spring-boot.version>2.3.7.RELEASE</spring-boot.version>
-    </properties>
+		<!-- 不需要web -->
+		<failOnMissingWebXml>false</failOnMissingWebXml>
+	</properties>
+
+	<!-- 打war包 -->
+	<packaging>war</packaging>
 
     <dependencies>
     

@@ -31,7 +31,7 @@ Page({
          // 网络请求 开始
          wx.request({
 
-            url: 'http://localhost:5000/user',
+            url: 'http://www.qxf.world/user',
 
             method: "POST",
 

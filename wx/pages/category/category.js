@@ -112,7 +112,7 @@ Page({
       // 网络请求 开始
       wx.request({
 
-         url: 'http://localhost:5000/category/all',
+         url: 'http://www.qxf.world/category/all',
 
          method: "GET",
 
@@ -188,7 +188,7 @@ Page({
       // 网络请求 开始
       wx.request({
 
-         url: 'http://localhost:5000/goods/all',
+         url: 'http://www.qxf.world/goods/all',
 
          method: "GET",
 

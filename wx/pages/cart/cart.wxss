@@ -43,7 +43,6 @@ image {
 /* 价格 */
 .price {
    margin-top: 5vh;
-   margin-bottom: -1vh;
    font-size: 21px;
    color: #FF5703;
 }
@@ -59,8 +58,7 @@ image {
 .count {
    font-size: 17px;
    color: rgb(168, 168, 168);
-   padding-top: 1.3vh;
-   padding-right: 2vw;
+   padding-top: 2.2vh;
    padding-left: 33vw;
    margin-top: -12vh;
 }

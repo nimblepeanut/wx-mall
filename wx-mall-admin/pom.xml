@@ -14,10 +14,15 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<spring-boot.version>2.3.7.RELEASE</spring-boot.version>
+		<!-- 不需要web -->
+		<failOnMissingWebXml>false</failOnMissingWebXml>
 	</properties>
 
+	<!-- 打war包 -->
+	<packaging>war</packaging>
+
 	<dependencies>
-	
+
 		<!-- 分页所需的包 -->
 		<!-- https://mvnrepository.com/artifact/com.github.pagehelper/pagehelper-spring-boot-starter -->
 		<dependency>
@@ -47,12 +52,7 @@
 			<version>2.1.4</version>
 		</dependency>
 
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-			<scope>runtime</scope>
-			<optional>true</optional>
-		</dependency>
+		
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>

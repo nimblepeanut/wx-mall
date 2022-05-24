@@ -100,25 +100,21 @@ public class CartServiceImpl implements CartService {
 
 		// 购物车
 		List<Cart> cartList = cartMapper.all(userId);
-		
+	
 		// 总金额,初始值为0
 		BigDecimal totalPrice = new BigDecimal("0");
 		
 		// 遍历修改每个商品的数量
 		for (Cart cart : cartList) {
-			
 			// 减少对应商品的库存	 
 			goodsMapper.updateCount(cart.getGoods().getId(), cart.getCount());
 			
 			// 注意：BigDecimal不能用 "*"、"+"等运算，必须用方法
-			
 			// multiply：乘，
 			// 需要用 new BigDecimal() 方法把数量从Integer转为BigDecimal
 			BigDecimal newNum = cart.getGoods().getPrice().multiply(new BigDecimal(cart.getCount()));
-			
 			// add：加
 			totalPrice = totalPrice.add(newNum);
-	
 		}
 		
 		// 修改用户余额

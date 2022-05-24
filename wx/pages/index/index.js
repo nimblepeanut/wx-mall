@@ -12,7 +12,7 @@ Page({
 
          {
            name: "商品列表",
-           image_url: "/pages//",
+           image_url: "/pages/search/search",
            image_src: "/icons/商品.png"
          },
    
@@ -53,7 +53,7 @@ Page({
 
       wx.request({
 
-         url: 'http://localhost:5000/goods/selectByRecommend',
+         url: 'http://www.qxf.world/goods/selectByRecommend',
 
          method: "GET",
 
@@ -103,7 +103,7 @@ Page({
 
       wx.request({
 
-         url: 'http://localhost:5000/category/recommend',
+         url: 'http://www.qxf.world/category/recommend',
 
          method: "GET",
 

@@ -1,8 +1,6 @@
 // app.js
 App({
 
-
-
    onLaunch() {
 
       // 背景音乐
@@ -43,7 +41,6 @@ App({
    },
 
    // 背景音乐 秋日私语
-
    setAudioPlay() {
       const adctx = wx.createInnerAudioContext()
       adctx.autoplay = true

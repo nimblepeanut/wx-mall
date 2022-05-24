@@ -34,7 +34,7 @@ public class AdminLoginController {
 	 */
 	@GetMapping
 	public String login() {
-		return "/login";
+		return "login";
 	}
 
 	/**
@@ -72,7 +72,7 @@ public class AdminLoginController {
 			session.setAttribute("admin", loginAdmin);
 
 			// 跳转到主页
-			return "redirect:/";
+			return "redirect:";
 
 		} catch (Exception e) {
 
@@ -99,7 +99,7 @@ public class AdminLoginController {
 		session.invalidate();
 
 		// 跳转
-		return "redirect:/login";
+		return "redirect:login";
 
 	}
 

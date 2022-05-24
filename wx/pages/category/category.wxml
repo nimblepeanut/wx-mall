@@ -42,7 +42,7 @@
          <view class="goods-list">
 
             <!-- 分类标题 开始 -->
-            <view class="category-title" wx:if="{{index==0}}">
+            <view class="category-title" wx:if="{{index==0 && goodsList.length<10}}">
                <text class="title-symbol">/</text>
                <text>{{item.category.name}}</text>
                <text class="title-symbol">/</text>

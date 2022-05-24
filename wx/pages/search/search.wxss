@@ -75,11 +75,10 @@ image {
 
  /* 库存 */
  .count {
-    padding-top: 1.3vh;
-    padding-right: 2vw;
     color: rgb(168, 168, 168);
     font-size: 17px;
-    padding-left: 33vw;
+    padding-top: 1.3vh;
+    padding-left: 32vw;
     margin-top: -5vh;
  }
 

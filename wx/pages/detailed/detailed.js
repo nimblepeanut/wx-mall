@@ -34,7 +34,7 @@ Page({
       // 网络请求 开始
       wx.request({
 
-         url: 'http://localhost:5000/goods/selectById',
+         url: 'http://www.qxf.world/goods/selectById',
 
          method: "GET",
 
